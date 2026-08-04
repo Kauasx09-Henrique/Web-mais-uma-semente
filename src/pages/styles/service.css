@@ -1,0 +1,330 @@
+/* ============================================================
+   PALETA — "Terra & Salvia"
+   --sauge-900 #2A332C   --terracota #C97B5C
+   --areia-100 #F6F1E9   --dourado   #C9A46A
+   ============================================================ */
+
+.services-section {
+    position: relative;
+    background: #2A332C;
+    padding: 160px 6% 150px;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+}
+
+.services-glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(92, 122, 100, 0.35) 0%, rgba(42, 51, 44, 0) 70%);
+    pointer-events: none;
+}
+
+.services-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.reveal-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.22, 1, .36, 1), transform 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.is-visible .reveal-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.is-visible .delay-1 {
+    transition-delay: 0.12s;
+}
+
+.is-visible .delay-2 {
+    transition-delay: 0.22s;
+}
+
+.is-visible .delay-3 {
+    transition-delay: 0.34s;
+}
+
+.is-visible .delay-4 {
+    transition-delay: 0.46s;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 24px;
+}
+
+.services-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A46A;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.services-tag::before,
+.services-tag::after {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: rgba(201, 164, 106, 0.5);
+}
+
+.services-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    color: #F6F1E9;
+    margin: 0 0 22px;
+}
+
+.services-subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(246, 241, 233, 0.65);
+    font-weight: 300;
+    margin: 0;
+    text-wrap: pretty;
+}
+
+.vital-line {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    margin: 0 auto 70px;
+}
+
+.vital-line path {
+    fill: none;
+    stroke: #C97B5C;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.service-card {
+    position: relative;
+    background: rgba(246, 241, 233, 0.04);
+    border: 1px solid rgba(246, 241, 233, 0.12);
+    border-radius: 6px;
+    padding: 44px 34px 38px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s cubic-bezier(.22, 1, .36, 1), border-color 0.4s ease, background 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(201, 164, 106, 0.4);
+    background: rgba(246, 241, 233, 0.06);
+}
+
+.service-card.highlight-card {
+    background: #F6F1E9;
+    border-color: #F6F1E9;
+    transform: scale(1.045);
+    box-shadow: 0 50px 80px -30px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.service-card.highlight-card:hover {
+    transform: scale(1.045) translateY(-10px);
+}
+
+.highlight-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #C97B5C;
+    color: #F6F1E9;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.card-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(201, 164, 106, 0.12);
+    color: #C9A46A;
+}
+
+.highlight-card .card-icon {
+    background: rgba(92, 122, 100, 0.12);
+    color: #5C7A64;
+}
+
+.card-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: #F6F1E9;
+    margin: 0 0 4px;
+}
+
+.highlight-card .card-title {
+    color: #2A332C;
+}
+
+.card-subtitle {
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(246, 241, 233, 0.5);
+    font-weight: 500;
+}
+
+.highlight-card .card-subtitle {
+    color: rgba(42, 51, 44, 0.55);
+}
+
+.card-divider {
+    height: 1px;
+    background: rgba(246, 241, 233, 0.12);
+    margin-bottom: 28px;
+}
+
+.highlight-card .card-divider {
+    background: rgba(42, 51, 44, 0.1);
+}
+
+.card-features {
+    list-style: none;
+    margin: 0 0 36px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: rgba(246, 241, 233, 0.78);
+    font-weight: 300;
+}
+
+.highlight-card .card-features li {
+    color: rgba(42, 51, 44, 0.78);
+}
+
+.check-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    color: #C97B5C;
+}
+
+.highlight-card .check-icon {
+    color: #5C7A64;
+}
+
+.btn-service {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 100px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(246, 241, 233, 0.35);
+    color: #F6F1E9;
+}
+
+.btn-outline:hover {
+    background: #F6F1E9;
+    color: #2A332C;
+    border-color: #F6F1E9;
+}
+
+.btn-filled {
+    background: #2A332C;
+    border: 1px solid #2A332C;
+    color: #F6F1E9;
+}
+
+.btn-filled:hover {
+    background: #C97B5C;
+    border-color: #C97B5C;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .service-card.highlight-card {
+        transform: none;
+        order: -1;
+    }
+
+    .service-card.highlight-card:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 560px) {
+    .services-section {
+        padding: 120px 6% 100px;
+    }
+
+    .service-card {
+        padding: 36px 26px 30px;
+    }
+}

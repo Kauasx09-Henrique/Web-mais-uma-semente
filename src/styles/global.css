@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+:root {
+
+    --cor-primaria: #04B3AE;
+    --cor-secundaria: #B7DAB0;
+    --cor-texto-principal: #6B2817;
+    --cor-fundo-claro: #F4F9F4;
+    --cor-detalhe-quente: #E1492B;
+    --cor-cinza: rgb(119, 120, 125);
+
+    /* Tipografia */
+    --fonte-titulo: 'Soho', serif;
+    --fonte-texto: 'Titillium Web', sans-serif;
+}

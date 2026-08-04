@@ -1,0 +1,184 @@
+/* ============================================================
+   Footer — Mais Uma Semente (minimalista, sem CTA card)
+   primária #04B3AE · secundária #B7DAB0 · texto #6B2817 · fundo #F4F9F4
+   ============================================================ */
+
+.footer-master {
+    position: relative;
+    background: #F4F9F4;
+    padding: 90px 6% 0;
+    font-family: 'Titillium Web', sans-serif;
+    border-top: 1px solid rgba(107, 40, 23, 0.1);
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1.1fr;
+    gap: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(107, 40, 23, 0.12);
+}
+
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    box-sizing: border-box;
+    background: #04B3AE;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.logo-thin {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgba(107, 40, 23, 0.6);
+}
+
+.logo-bold {
+    font-family: 'Soho', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #6B2817;
+}
+
+.footer-bio {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: rgba(107, 40, 23, 0.65);
+    max-width: 320px;
+    margin: 0;
+    text-wrap: pretty;
+}
+
+.footer-social-wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(107, 40, 23, 0.2);
+    color: #6B2817;
+    text-decoration: none;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+.social-icon-link:hover {
+    background: #04B3AE;
+    border-color: #04B3AE;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-col-title {
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #04B3AE;
+    font-weight: 700;
+    margin: 0 0 22px;
+}
+
+.footer-nav,
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-link {
+    font-size: 0.92rem;
+    color: rgba(107, 40, 23, 0.75);
+    text-decoration: none;
+    font-weight: 300;
+    width: fit-content;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #04B3AE;
+    transform: translateX(4px);
+}
+
+.footer-static-text {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: rgba(107, 40, 23, 0.55);
+}
+
+.footer-bottom-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 26px 0;
+    font-size: 0.78rem;
+    color: rgba(107, 40, 23, 0.5);
+}
+
+.crp-badge {
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 44px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-master {
+        padding: 70px 6% 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
