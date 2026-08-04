@@ -42,7 +42,6 @@ export function HomeCarousel() {
     return (
         <section className="hero-section">
 
-
             <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
