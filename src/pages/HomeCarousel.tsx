@@ -5,7 +5,6 @@ import type { Swiper as SwiperType } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-
 import './styles/homecarousel.css';
 
 const slides = [
