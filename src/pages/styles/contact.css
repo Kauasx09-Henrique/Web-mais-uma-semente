@@ -1,0 +1,279 @@
+/* ============================================================
+   Contato — Mais Uma Semente
+   fundo lavanda clara #EDE9F7 · acento lavanda #8B7FC7 · texto #1E1B24
+   ============================================================ */
+
+.contact-section {
+    position: relative;
+    background: #FFFFFF;
+    padding: 150px 6% 140px;
+    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contact-glow {
+    position: absolute;
+    top: -180px;
+    left: -120px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 127, 199, 0.2) 0%, rgba(139, 127, 199, 0) 70%);
+    pointer-events: none;
+}
+
+.contact-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reveal-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(.22, 1, .36, 1), transform 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.is-visible .reveal-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.is-visible .delay-1 {
+    transition-delay: 0.15s;
+}
+
+.is-visible .delay-2 {
+    transition-delay: 0.28s;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 64px;
+}
+
+.contact-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8B7FC7;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.contact-tag::before,
+.contact-tag::after {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: rgba(139, 127, 199, 0.5);
+}
+
+.contact-title {
+    font-family: 'Soho', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: #1E1B24;
+    margin: 0 0 20px;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(30, 27, 36, 0.65);
+    font-weight: 300;
+    margin: 0;
+    text-wrap: pretty;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 26px;
+    background: #EDE9F7;
+    border-radius: 10px;
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.info-card:hover {
+    transform: translateX(6px);
+    background: #E3DDF3;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #8B7FC7;
+    color: #FFFFFF;
+}
+
+.info-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.info-title {
+    font-family: 'Soho', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #1E1B24;
+    margin: 0 0 4px;
+}
+
+.info-line {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(30, 27, 36, 0.65);
+    font-weight: 300;
+    margin: 0;
+}
+
+.map-frame {
+    margin-top: 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(30, 27, 36, 0.08);
+    filter: saturate(0.9);
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 220px;
+    border: none;
+    display: block;
+}
+
+.contact-form {
+    background: #EDE9F7;
+    border: 1px solid rgba(139, 127, 199, 0.25);
+    border-radius: 14px;
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 30px 60px -35px rgba(30, 27, 36, 0.18);
+}
+
+.form-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8B7FC7;
+    font-weight: 700;
+}
+
+.form-title {
+    font-family: 'Soho', 'Georgia', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #1E1B24;
+    margin: 0 0 8px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field span {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: rgba(30, 27, 36, 0.6);
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+    background: #FFFFFF;
+    border: 1px solid rgba(30, 27, 36, 0.12);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: #1E1B24;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.94rem;
+    font-weight: 300;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(30, 27, 36, 0.35);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #8B7FC7;
+    box-shadow: 0 0 0 3px rgba(139, 127, 199, 0.18);
+}
+
+.btn-whatsapp {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 17px 24px;
+    background: #1E1B24;
+    border: none;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.35s ease, transform 0.3s ease;
+}
+
+.btn-whatsapp svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-whatsapp:hover {
+    background: #8B7FC7;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-section {
+        padding: 110px 6% 100px;
+    }
+
+    .contact-form {
+        padding: 36px 26px;
+    }
+}

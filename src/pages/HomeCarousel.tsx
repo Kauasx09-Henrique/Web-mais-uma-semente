@@ -5,29 +5,30 @@ import type { Swiper as SwiperType } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+
 import './styles/homecarousel.css';
 
 const slides = [
     {
         id: 1,
         image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop',
-        tag: 'Bem-estar integral',
-        title: 'Cultive o seu bem-estar',
-        subtitle: 'Facilitadora de bem-estar físico e psicológico para um crescimento saudável.',
+        tag: 'Psicoterapia',
+        title: 'Cultive o seu bem-estar emocional',
+        subtitle: 'Um espaço de escuta para você se conhecer e crescer com mais equilíbrio.',
     },
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop',
-        tag: 'Terapia corporal',
-        title: 'Psicoterapia Reichiana',
-        subtitle: 'Encontre a energia vital e a harmonia que seu corpo e mente precisam.',
+        tag: 'Psicanálise',
+        title: 'Escuta que transforma',
+        subtitle: 'Uma abordagem psicanalítica para compreender suas questões mais profundas.',
     },
     {
         id: 3,
         image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=2000&auto=format&fit=crop',
-        tag: 'Cuidado ancestral',
-        title: 'Yoga Massagem Ayurvédica',
-        subtitle: 'Um estado de paz, harmonia e cuidado profundo com você mesmo.',
+        tag: 'Adolescentes e adultos',
+        title: 'Cuidado em cada fase da vida',
+        subtitle: 'Atendimento presencial em Brasília e online para todo o Brasil.',
     }
 ];
 
@@ -39,7 +40,8 @@ export function HomeCarousel() {
     const pad = (n: number) => String(n + 1).padStart(2, '0');
 
     return (
-        <section className="hero-section">
+        <section id="inicio" className="hero-section">
+            <div className="hero-brandmark">Psicoterapia · Psicanálise</div>
 
             <Swiper
                 modules={[Autoplay, EffectFade]}

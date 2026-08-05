@@ -2,7 +2,8 @@ import { Header } from './components/Header';
 import { Footer } from './components/footer';
 import { HomeCarousel } from './pages/HomeCarousel';
 import { About } from './pages/About';
-import { Services } from './pages/Services'; // <-- Importe aqui
+import { Services } from './pages/Services';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HomeCarousel />
       <About />
       <Services />
+      <Contact />
       <Footer />
     </div>
   );

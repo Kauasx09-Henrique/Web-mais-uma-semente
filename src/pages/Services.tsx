@@ -1,71 +1,48 @@
 import { useEffect, useRef } from 'react';
 import './styles/service.css';
 
-const IconBreath = () => (
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
-        <circle cx="24" cy="24" r="18" opacity="0.25" />
-        <path d="M8 24c3-6 6-9 8-9s3 9 6 9 4-9 6-9 5 3 8 9" strokeLinejoin="round" />
+const IconTeen = () => (
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="24" cy="16" r="7" />
+        <path d="M10 40c0-9 6-15 14-15s14 6 14 15" />
     </svg>
 );
 
-const IconSeed = () => (
+const IconAdult = () => (
     <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 40V22" />
-        <path d="M24 22c0-8-6-13-13-13 0 8 5 13 13 13Z" />
-        <path d="M24 26c0-7 6-11 11-11 0 7-4 11-11 11Z" />
-    </svg>
-);
-
-const IconHands = () => (
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M8 28c2 8 8 12 16 12s14-4 16-12" />
-        <path d="M8 28c0-6 3-9 6-9" />
-        <path d="M40 28c0-6-3-9-6-9" />
-        <circle cx="24" cy="20" r="4" opacity="0.5" />
+        <circle cx="18" cy="14" r="6" />
+        <circle cx="32" cy="16" r="5" />
+        <path d="M6 40c0-8 5-13 12-13s12 5 12 13" />
+        <path d="M28 27c6 .5 10 5 10 13" />
     </svg>
 );
 
 const servicesData = [
     {
-        id: 'psicoterapia',
-        icon: <IconBreath />,
-        title: 'Psicoterapia',
+        id: 'adolescentes',
+        icon: <IconTeen />,
+        title: 'Adolescentes',
         subtitle: 'Sob consulta',
         features: [
             'Sessão individual (50 min)',
-            'Abordagem Reichiana',
-            'Desbloqueio emocional',
+            'Espaço seguro de escuta',
+            'Apoio no autoconhecimento',
             'Acompanhamento contínuo',
-            'Suporte online ou presencial'
+            'Atendimento online ou presencial'
         ],
         highlight: false
     },
     {
-        id: 'pacote-semente',
-        icon: <IconSeed />,
-        title: 'Pacote Semente',
-        subtitle: 'Sob consulta',
-        badge: 'Mente + Corpo',
-        features: [
-            'Integração Mente e Corpo',
-            '2 sessões de Psicoterapia/mês',
-            '2 sessões de Yoga Massagem/mês',
-            'Plano de acompanhamento',
-            'Prioridade de agendamento'
-        ],
-        highlight: true
-    },
-    {
-        id: 'yoga-massagem',
-        icon: <IconHands />,
-        title: 'Yoga Massagem',
+        id: 'adultos',
+        icon: <IconAdult />,
+        title: 'Adultos',
         subtitle: 'Sob consulta',
         features: [
-            'Sessão individual (1h30)',
-            'Técnica Ayurvédica',
-            'Alinhamento postural',
-            'Estimulação da energia vital',
-            'Uso de óleos essenciais'
+            'Sessão individual (50 min)',
+            'Escuta acolhedora e sigilosa',
+            'Desenvolvimento emocional',
+            'Acompanhamento contínuo',
+            'Atendimento online ou presencial'
         ],
         highlight: false
     }
@@ -101,11 +78,11 @@ export function Services() {
             <div className="services-container">
 
                 <div className="services-header reveal-element">
-                    <span className="services-tag">Cuidado e energia vital</span>
+                    <span className="services-tag">Psicoterapia</span>
                     <h2 className="services-title">Investimento</h2>
                     <p className="services-subtitle">
-                        Escolha o caminho que melhor acompanha o seu momento — sessões avulsas
-                        ou um plano contínuo de integração entre mente e corpo.
+                        Atendimento psicoterapêutico individual, adaptado ao momento de
+                        vida de adolescentes e adultos.
                     </p>
                 </div>
 
@@ -117,12 +94,8 @@ export function Services() {
                     {servicesData.map((service, index) => (
                         <div
                             key={service.id}
-                            className={`service-card reveal-element delay-${index + 2} ${service.highlight ? 'highlight-card' : ''}`}
+                            className={`service-card reveal-element delay-${index + 2}`}
                         >
-                            {service.highlight && service.badge && (
-                                <span className="highlight-badge">{service.badge}</span>
-                            )}
-
                             <div className="card-top">
                                 <span className="card-icon" aria-hidden="true">{service.icon}</span>
                                 <div>
@@ -136,16 +109,18 @@ export function Services() {
                             <ul className="card-features">
                                 {service.features.map((feature, i) => (
                                     <li key={i}>
-                                        <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <polyline points="20 6 9 17 4 12"></polyline>
-                                        </svg>
+                                        <span className="check-badge" aria-hidden="true">
+                                            <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </span>
                                         {feature}
                                     </li>
                                 ))}
                             </ul>
 
-                            <button className={`btn-service ${service.highlight ? 'btn-filled' : 'btn-outline'}`}>
-                                Solicitar orçamento
+                            <button className="btn-service btn-outline">
+                                Solicitar Atendimento
                             </button>
                         </div>
                     ))}

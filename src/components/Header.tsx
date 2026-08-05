@@ -1,26 +1,16 @@
 import { useEffect, useState } from 'react';
 import './styles/header.css';
 
-import logo from '../../public/logo.png';
+import logo from '../../public/logo-preta.png';
 
 const navItems = [
     { href: '#inicio', label: 'Início' },
     { href: '#terapias', label: 'Terapias' },
-    { href: '#sobre', label: 'A Clínica' },
+    { href: '#sobre', label: 'Sobre mim' },
+    { href: '#contato', label: 'Contato' },
 ];
 
-const SeedIcon = ({ className }: { className?: string }) => (
-    <svg
-        className={className}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        aria-hidden="true"
-    >
-        <path d="M12 22c0-4.5-3.5-8-8-8 4.5 0 8-3.5 8-8 0 4.5 3.5 8 8 8-4.5 0-8 3.5-8 8z" />
-    </svg>
-);
+
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -65,11 +55,6 @@ export function Header() {
                 </nav>
 
                 <div className="header-action">
-                    <button className="btn-agendar">
-                        <span className="btn-text">Agendar</span>
-                        <SeedIcon className="seed-icon" />
-                    </button>
-
                     <button
                         className={`menu-toggle ${isMenuOpen ? 'is-open' : ''}`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -99,10 +84,6 @@ export function Header() {
                         </a>
                     ))}
                 </nav>
-                <button className="btn-agendar mobile-btn" onClick={() => setIsMenuOpen(false)}>
-                    <span className="btn-text">Agendar Sessão</span>
-                    <SeedIcon className="seed-icon" />
-                </button>
             </div>
         </header>
     );
