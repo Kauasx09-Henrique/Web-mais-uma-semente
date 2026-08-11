@@ -5,27 +5,30 @@ import type { Swiper as SwiperType } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-
 import './styles/homecarousel.css';
+
+import livro from '../../public/imagem-carrosel/livro.png';
+import mulher from '../../public/imagem-carrosel/mulher.png';
+// import flor from '../../public/imagem-carrosel/flor.png';
 
 const slides = [
     {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop',
+        image: livro,
         tag: 'Psicoterapia',
         title: 'Cultive o seu bem-estar emocional',
         subtitle: 'Um espaço de escuta para você se conhecer e crescer com mais equilíbrio.',
     },
     {
         id: 2,
-        image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1645724466238-9352ff166001?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=yukon-haughton-4ncwYUlNtEU-unsplash.jpg',
         tag: 'Psicanálise',
         title: 'Escuta que transforma',
         subtitle: 'Uma abordagem psicanalítica para compreender suas questões mais profundas.',
     },
     {
         id: 3,
-        image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=2000&auto=format&fit=crop',
+        image: mulher,
         tag: 'Adolescentes e adultos',
         title: 'Cuidado em cada fase da vida',
         subtitle: 'Atendimento presencial em Brasília e online para todo o Brasil.',

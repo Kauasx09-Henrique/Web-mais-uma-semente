@@ -1,0 +1,232 @@
+.quote-section {
+    position: relative;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    padding: 170px 8%;
+    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.quote-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../../public/fundo-pagina/cuong-duyen-ceramics-hY6bWKsVcko-unsplash.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    transform: scale(1.05);
+    filter: saturate(0.6) contrast(1.05);
+    animation: quoteDrift 26s ease-in-out infinite alternate;
+}
+
+@keyframes quoteDrift {
+    0% {
+        transform: scale(1.05) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1.12) translate3d(-2%, -1%, 0);
+    }
+}
+
+.quote-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(100deg, rgba(24, 21, 30, 0.9) 0%, rgba(24, 21, 30, 0.65) 46%, rgba(24, 21, 30, 0.25) 100%),
+        radial-gradient(circle at 22% 55%, rgba(139, 127, 199, 0.3) 0%, rgba(24, 21, 30, 0) 62%);
+}
+
+.quote-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.045;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* etiqueta vertical na borda */
+.quote-side-label {
+    position: absolute;
+    right: 3.2%;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: 0.72rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.28);
+    z-index: 3;
+}
+
+.quote-side-label::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60px;
+    margin: 18px auto 0;
+    background: linear-gradient(to bottom, rgba(139, 127, 199, 0.8), transparent);
+}
+
+.quote-container {
+    position: relative;
+    z-index: 2;
+    max-width: 940px;
+    color: #FFFFFF;
+}
+
+/* kicker */
+.quote-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #CFC6EC;
+    margin-bottom: 42px;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.quote-kicker::before {
+    content: '';
+    width: 42px;
+    height: 1px;
+    background: #8B7FC7;
+}
+
+.is-visible .quote-kicker {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* frase */
+.quote-text {
+    position: relative;
+    margin: 0 0 64px;
+    padding: 0;
+}
+
+.quote-mark {
+    position: absolute;
+    top: -0.42em;
+    left: -0.12em;
+    font-family: 'Soho', 'Georgia', serif;
+    font-size: clamp(9rem, 16vw, 15rem);
+    line-height: 1;
+    color: rgba(139, 127, 199, 0.28);
+    pointer-events: none;
+    user-select: none;
+}
+
+.quote-line {
+    display: block;
+    overflow: hidden;
+}
+
+.quote-line-inner {
+    display: block;
+    font-family: 'Soho', 'Georgia', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5.4vw, 4.4rem);
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    transform: translateY(115%);
+    transition: transform 1.05s cubic-bezier(.19, 1, .22, 1);
+}
+
+.quote-line-inner em {
+    font-style: italic;
+    color: #CFC6EC;
+}
+
+.is-visible .quote-line-inner {
+    transform: translateY(0);
+}
+
+/* rodapé da citação */
+.quote-footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 44px;
+    padding-top: 34px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease 0.62s, transform 1s ease 0.62s;
+}
+
+.is-visible .quote-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.quote-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    white-space: nowrap;
+}
+
+.quote-author-line {
+    width: 40px;
+    height: 1px;
+    background: #8B7FC7;
+}
+
+.quote-author-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.quote-note {
+    font-size: 1rem;
+    line-height: 1.75;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.62);
+    max-width: 440px;
+    margin: 0;
+    text-wrap: pretty;
+}
+
+@media (max-width: 900px) {
+    .quote-side-label {
+        display: none;
+    }
+
+    .quote-footer {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .quote-section {
+        min-height: 620px;
+        padding: 130px 7%;
+    }
+
+    .quote-kicker {
+        margin-bottom: 30px;
+        letter-spacing: 0.24em;
+    }
+
+    .quote-mark {
+        font-size: 7rem;
+        top: -0.34em;
+    }
+
+    .quote-text {
+        margin-bottom: 46px;
+    }
+}

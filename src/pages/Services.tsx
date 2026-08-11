@@ -1,72 +1,51 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './styles/service.css';
-
-const IconTeen = () => (
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="24" cy="16" r="7" />
-        <path d="M10 40c0-9 6-15 14-15s14 6 14 15" />
-    </svg>
-);
-
-const IconAdult = () => (
-    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="18" cy="14" r="6" />
-        <circle cx="32" cy="16" r="5" />
-        <path d="M6 40c0-8 5-13 12-13s12 5 12 13" />
-        <path d="M28 27c6 .5 10 5 10 13" />
-    </svg>
-);
 
 const servicesData = [
     {
         id: 'adolescentes',
-        icon: <IconTeen />,
+        index: '01',
         title: 'Adolescentes',
-        subtitle: 'Sob consulta',
+        lead: 'Um espaço próprio, sigiloso, para atravessar as mudanças dessa fase com apoio.',
+        duration: '50 min',
+        format: 'Online ou presencial',
         features: [
-            'Sessão individual (50 min)',
             'Espaço seguro de escuta',
             'Apoio no autoconhecimento',
-            'Acompanhamento contínuo',
-            'Atendimento online ou presencial'
-        ],
-        highlight: false
+            'Orientação familiar quando necessário',
+            'Acompanhamento contínuo'
+        ]
     },
     {
         id: 'adultos',
-        icon: <IconAdult />,
+        index: '02',
         title: 'Adultos',
-        subtitle: 'Sob consulta',
+        lead: 'Escuta psicanalítica para dar palavra ao que ainda não pôde ser dito.',
+        duration: '50 min',
+        format: 'Online ou presencial',
         features: [
-            'Sessão individual (50 min)',
             'Escuta acolhedora e sigilosa',
+            'Elaboração de questões profundas',
             'Desenvolvimento emocional',
-            'Acompanhamento contínuo',
-            'Atendimento online ou presencial'
-        ],
-        highlight: false
+            'Acompanhamento contínuo'
+        ]
     }
 ];
 
 export function Services() {
     const sectionRef = useRef<HTMLElement>(null);
+    const [open, setOpen] = useState<string | null>('adolescentes');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
+                    if (entry.isIntersecting) entry.target.classList.add('is-visible');
                 });
             },
-            { threshold: 0.1 }
+            { threshold: 0.12 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => {
             if (sectionRef.current) observer.unobserve(sectionRef.current);
         };
@@ -74,58 +53,80 @@ export function Services() {
 
     return (
         <section id="terapias" className="services-section" ref={sectionRef}>
-            <div className="services-glow"></div>
+            <span className="services-watermark" aria-hidden="true">Psicoterapia</span>
+
             <div className="services-container">
-
-                <div className="services-header reveal-element">
-                    <span className="services-tag">Psicoterapia</span>
-                    <h2 className="services-title">Investimento</h2>
+                <header className="services-header">
+                    <span className="services-kicker">Atendimento</span>
+                    <h2 className="services-title">
+                        Como podemos<br />
+                        <em>trabalhar juntas</em>
+                    </h2>
                     <p className="services-subtitle">
-                        Atendimento psicoterapêutico individual, adaptado ao momento de
-                        vida de adolescentes e adultos.
+                        Psicoterapia individual de orientação psicanalítica, adaptada ao
+                        momento de vida de cada pessoa.
                     </p>
-                </div>
+                </header>
 
-                <svg className="vital-line reveal-element delay-1" viewBox="0 0 720 40" preserveAspectRatio="none" aria-hidden="true">
-                    <path d="M0 20 C 60 4, 120 36, 180 20 S 300 4, 360 20 S 480 36, 540 20 S 660 4, 720 20" />
-                </svg>
+                <div className="services-list">
+                    {servicesData.map((service, i) => {
+                        const isOpen = open === service.id;
+                        return (
+                            <article
+                                key={service.id}
+                                className={`service-row ${isOpen ? 'is-open' : ''}`}
+                                style={{ transitionDelay: `${0.1 + i * 0.12}s` }}
+                            >
+                                <button
+                                    className="service-head"
+                                    onClick={() => setOpen(isOpen ? null : service.id)}
+                                    aria-expanded={isOpen}
+                                >
+                                    <span className="service-index">{service.index}</span>
+                                    <span className="service-heading">
+                                        <span className="service-name">{service.title}</span>
+                                        <span className="service-lead">{service.lead}</span>
+                                    </span>
+                                    <span className="service-toggle" aria-hidden="true">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </button>
 
-                <div className="services-grid">
-                    {servicesData.map((service, index) => (
-                        <div
-                            key={service.id}
-                            className={`service-card reveal-element delay-${index + 2}`}
-                        >
-                            <div className="card-top">
-                                <span className="card-icon" aria-hidden="true">{service.icon}</span>
-                                <div>
-                                    <h3 className="card-title">{service.title}</h3>
-                                    <span className="card-subtitle">{service.subtitle}</span>
+                                <div className="service-body">
+                                    <div className="service-body-inner">
+                                        <ul className="service-features">
+                                            {service.features.map((f, k) => (
+                                                <li key={k}>{f}</li>
+                                            ))}
+                                        </ul>
+
+                                        <div className="service-meta">
+                                            <div className="meta-row">
+                                                <span className="meta-label">Duração</span>
+                                                <span className="meta-value">{service.duration}</span>
+                                            </div>
+                                            <div className="meta-row">
+                                                <span className="meta-label">Formato</span>
+                                                <span className="meta-value">{service.format}</span>
+                                            </div>
+                                            <div className="meta-row">
+                                                <span className="meta-label">Valor</span>
+                                                <span className="meta-value">Sob consulta</span>
+                                            </div>
+                                            <a href="#contato" className="btn-service">
+                                                <span>Solicitar atendimento</span>
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="card-divider"></div>
-
-                            <ul className="card-features">
-                                {service.features.map((feature, i) => (
-                                    <li key={i}>
-                                        <span className="check-badge" aria-hidden="true">
-                                            <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <button className="btn-service btn-outline">
-                                Solicitar Atendimento
-                            </button>
-                        </div>
-                    ))}
+                            </article>
+                        );
+                    })}
                 </div>
-
             </div>
         </section>
     );
