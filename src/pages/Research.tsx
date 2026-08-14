@@ -50,7 +50,7 @@ const publications = [
 const timeline = [
     { year: '2009', label: 'Graduação em Psicologia', place: 'UniCEUB' },
     { year: '2016', label: 'Mestrado em Psicologia Clínica e Cultura', place: 'Universidade de Brasília' },
-    { year: '—', label: 'Especialização em Teoria Psicanalítica', place: 'UniCEUB / Sociedade de Psicanálise de Brasília' }
+    { year: '2025', label: 'Especialização em Teoria Psicanalítica', place: 'UniCEUB / Sociedade de Psicanálise de Brasília' }
 ];
 
 export function Research() {

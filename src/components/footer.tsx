@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles/footer.css';
 
 const SeedIcon = ({ className }: { className?: string }) => (
@@ -31,66 +32,115 @@ const LinkedinIcon = () => (
 );
 
 const navLinks = [
-    { href: '#inicio', label: 'Início' },
-    { href: '#sobre', label: 'A Clínica' },
-    { href: '#terapias', label: 'Investimento' },
+    { href: '/#inicio', label: 'Início' },
+    { href: '/#sobre', label: 'Sobre mim' },
+    { href: '/#terapias', label: 'Terapias' },
+    { href: '/pesquisa', label: 'Pesquisa', internal: true },
+    { href: '/#contato', label: 'Contato' },
 ];
 
 const socialLinks = [
     { href: '#', label: 'Instagram', icon: <InstagramIcon /> },
-    { href: '#', label: 'WhatsApp', icon: <WhatsappIcon /> },
+    { href: 'https://wa.me/5561999999999', label: 'WhatsApp', icon: <WhatsappIcon /> },
     { href: '#', label: 'LinkedIn', icon: <LinkedinIcon /> },
 ];
 
 export function Footer() {
     return (
         <footer className="footer-master">
-            <div className="footer-grid">
+            <span className="footer-watermark" aria-hidden="true">Semente</span>
 
-                <div className="footer-brand-col">
-                    <a href="/" className="footer-logo">
-                        <SeedIcon className="logo-icon" />
-                        <div className="logo-text">
-                            <span className="logo-thin">mais uma</span>
-                            <span className="logo-bold">SEMENTE</span>
-                        </div>
-                    </a>
-                    <p className="footer-bio">
-                        Facilitadora de bem-estar físico e psicológico. Um espaço seguro para você refletir, curar e crescer com harmonia.
+            <div className="footer-inner">
+
+                <div className="footer-top">
+                    <p className="footer-statement">
+                        Que tipo de semente
+                        <em> eu quero ser?</em>
                     </p>
-                    <div className="footer-social-wrapper">
-                        {socialLinks.map((social) => (
-                            <a key={social.label} href={social.href} className="social-icon-link" aria-label={social.label} title={social.label}>
-                                {social.icon}
+                    <a href="/#contato" className="footer-cta">
+                        <span>Agendar uma conversa</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div className="footer-grid">
+                    <div className="footer-brand-col">
+                        <Link to="/" className="footer-logo">
+                            <SeedIcon className="logo-icon" />
+                            <span className="logo-text">
+                                <span className="logo-thin">mais uma</span>
+                                <span className="logo-bold">SEMENTE</span>
+                            </span>
+                        </Link>
+                        <p className="footer-bio">
+                            Psicoterapia de orientação psicanalítica para adolescentes e
+                            adultos. Um espaço de escuta para refletir, elaborar e crescer.
+                        </p>
+                        <div className="footer-social-wrapper">
+                            {socialLinks.map((social) => (
+                                <a
+                                    key={social.label}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="social-icon-link"
+                                    aria-label={social.label}
+                                    title={social.label}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="footer-links-col">
+                        <h4 className="footer-col-title">Navegação</h4>
+                        <nav className="footer-nav">
+                            {navLinks.map((link, i) =>
+                                link.internal ? (
+                                    <Link key={link.label} to={link.href} className="footer-link">
+                                        <span className="footer-link-num">0{i + 1}</span>
+                                        {link.label}
+                                    </Link>
+                                ) : (
+                                    <a key={link.label} href={link.href} className="footer-link">
+                                        <span className="footer-link-num">0{i + 1}</span>
+                                        {link.label}
+                                    </a>
+                                )
+                            )}
+                        </nav>
+                    </div>
+
+                    <div className="footer-contact-col">
+                        <h4 className="footer-col-title">Contato</h4>
+                        <div className="footer-contacts">
+                            <a href="mailto:contato@maisumasemente.com.br" className="footer-contact-item">
+                                <span className="contact-label">E-mail</span>
+                                <span className="contact-value">contato@maisumasemente.com.br</span>
                             </a>
-                        ))}
+                            <a href="tel:+5561999999999" className="footer-contact-item">
+                                <span className="contact-label">Telefone</span>
+                                <span className="contact-value">+55 (61) 99999-9999</span>
+                            </a>
+                            <div className="footer-contact-item is-static">
+                                <span className="contact-label">Consultório</span>
+                                <span className="contact-value">Asa Norte, Brasília — DF</span>
+                                <span className="contact-extra">Presencial e online</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="footer-links-col">
-                    <h4 className="footer-col-title">Navegação</h4>
-                    <nav className="footer-nav">
-                        {navLinks.map((link) => (
-                            <a key={link.label} href={link.href} className="footer-link">
-                                {link.label}
-                            </a>
-                        ))}
-                    </nav>
+                <div className="footer-bottom-bar">
+                    <span className="copyright">
+                        © {new Date().getFullYear()} Mais Uma Semente · Naiara Windmöller
+                    </span>
+                    <span className="crp-badge">CRP 15.411/DF</span>
                 </div>
 
-                <div className="footer-contact-col">
-                    <h4 className="footer-col-title">Contato</h4>
-                    <div className="footer-contacts">
-                        <a href="mailto:contato@maisumasemente.com.br" className="footer-link">contato@maisumasemente.com.br</a>
-                        <a href="tel:+5511999999999" className="footer-link">+55 11 99999-9999</a>
-                        <span className="footer-static-text">Atendimento Online e Presencial (SP)</span>
-                    </div>
-                </div>
-            </div>
-
-            <div className="footer-bottom-bar">
-                <span className="copyright">© {new Date().getFullYear()} Mais Uma Semente. Todos os direitos reservados.</span>
-                <span className="crp-badge">CRP 00/00000</span>
             </div>
         </footer>
     );
