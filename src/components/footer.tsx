@@ -54,11 +54,11 @@ export function Footer() {
 
                 <div className="footer-top">
                     <p className="footer-statement">
-                        Que tipo de semente
-                        <em> eu quero ser?</em>
+                        Um espaço para
+                        <em> você se escutar.</em>
                     </p>
                     <a href="/#contato" className="footer-cta">
-                        <span>Agendar uma conversa</span>
+                        <span> Agendar Primeira Entrevista</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M5 12h14M13 6l6 6-6 6" />
                         </svg>

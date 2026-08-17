@@ -30,7 +30,7 @@ const contactInfo = [
     }
 ];
 
-const subjects = ['Primeira sessão', 'Já faço terapia', 'Dúvidas', 'Outro assunto'];
+const subjects = ['Primeira sessão', 'Dúvidas', 'Outro assunto'];
 
 export function Contact() {
     const sectionRef = useRef<HTMLElement>(null);

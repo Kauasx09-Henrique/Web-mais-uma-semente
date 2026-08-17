@@ -50,7 +50,6 @@ export function Quote() {
                 <div className="quote-footer">
                     <div className="quote-author">
                         <span className="quote-author-line"></span>
-                        <span className="quote-author-name">Carl Gustav Jung</span>
                     </div>
                     <p className="quote-note">
                         A psicanálise é o caminho para dar palavra ao que ainda não pôde ser dito.

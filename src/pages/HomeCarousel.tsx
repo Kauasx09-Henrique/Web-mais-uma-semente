@@ -16,21 +16,21 @@ const slides = [
         id: 1,
         image: livro,
         tag: 'Psicoterapia',
-        title: 'Cultive o seu bem-estar emocional',
-        subtitle: 'Um espaço de escuta para você se conhecer e crescer com mais equilíbrio.',
+        title: 'Dar lugar a si',
+        subtitle: 'Um espaço dedicado aos processos subjetivos. Onde o sintoma vira escuta e o sujeito encontra sua própria voz',
     },
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1645724466238-9352ff166001?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=yukon-haughton-4ncwYUlNtEU-unsplash.jpg',
         tag: 'Psicanálise',
-        title: 'Escuta que transforma',
+        title: 'Abordagem psicanalítica dedicada à investigação da sua dinâmica psíquica e seus impasses',
         subtitle: 'Uma abordagem psicanalítica para compreender suas questões mais profundas.',
     },
     {
         id: 3,
         image: mulher,
         tag: 'Adolescentes e adultos',
-        title: 'Cuidado em cada fase da vida',
+        title: 'Acolhimento nos diversos tempos do sujeito',
         subtitle: 'Atendimento presencial em Brasília e online para todo o Brasil.',
     }
 ];
@@ -70,7 +70,7 @@ export function HomeCarousel() {
                                 <h1 className="slide-title">{slide.title}</h1>
                                 <p className="slide-subtitle">{slide.subtitle}</p>
                                 <button className="btn-cta">
-                                    <span>Começar minha jornada</span>
+                                    <span>Sustentar a travessia </span>
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                                         <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>

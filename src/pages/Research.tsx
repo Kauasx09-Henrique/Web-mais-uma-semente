@@ -3,54 +3,95 @@ import './styles/research.css';
 
 const stats = [
     { value: '15+', label: 'anos de clínica' },
-    { value: 'UnB', label: 'mestrado em Psicologia Clínica e Cultura' },
-    { value: '3', label: 'formações em psicanálise' }
+    { value: '7', label: 'trabalhos publicados' },
+    { value: 'UnB', label: 'mestrado em Psicologia Clínica e Cultura' }
 ];
 
 const themes = [
     {
-        id: 'masculinidades',
+        id: 'genero',
         num: 'I',
-        title: 'Masculinidades e sofrimento psíquico',
-        text: 'Como os modelos de masculinidade moldam a forma de adoecer, pedir ajuda e nomear a dor.'
-    },
-    {
-        id: 'corpo',
-        num: 'II',
-        title: 'Corpo, saúde e subjetividade',
-        text: 'As representações que construímos do próprio corpo e o que elas dizem da nossa história.'
-    },
-    {
-        id: 'cultura',
-        num: 'III',
         title: 'Gênero, cultura e saúde mental',
-        text: 'O atravessamento entre cultura e psiquismo — o social que se inscreve no sujeito.'
+        text: 'Escutar o sofrimento pela perspectiva dos estudos de gênero e da saúde mental muda toda uma análise. Vivemos em uma cultura que nos adoece de formas diferentes conforme os dispositivos que nos capturam.'
+    },
+    {
+        id: 'feminilidade',
+        num: 'II',
+        title: 'Feminilidade',
+        text: 'Estudar a feminilidade hoje exige coragem para desconstruir os dispositivos que tentam silenciar o desejo das mulheres. A psicanálise oferece o silêncio necessário para que a mulher possa se ouvir e passe a ser a autora da sua própria narrativa.'
+    },
+    {
+        id: 'corporeidade',
+        num: 'III',
+        title: 'Corporeidade',
+        text: 'O sofrimento humano não é apenas uma narrativa da mente; é uma geografia inscrita no corpo. A clínica pós-reichiana e os estudos antropológicos sobre corporeidade me permitiram escutar a totalidade de quem sofre.'
     }
 ];
 
 const publications = [
     {
+        id: 'feminilidade-monografia',
+        year: '2025',
+        type: 'Monografia de especialização',
+        title: 'A construção da feminilidade e da maternidade: desenrolando antigas teias e tecendo novas',
+        venue: 'Especialização em Teoria Psicanalítica — Centro Universitário de Brasília em parceria com a Sociedade Brasileira de Psicanálise. Orientadora: Lívia Milhomem Januário',
+        link: null
+    },
+    {
+        id: 'depressao-homens',
+        year: '2019',
+        type: 'Artigo',
+        title: 'Depressão em homens: uma leitura a partir das masculinidades',
+        venue: 'Publicação em periódico',
+        link: 'https://drive.google.com/file/d/1N6z3Gq7ZWjizzEKYQ612NTvjRK1id89e/view'
+    },
+    {
+        id: 'analise-reichiana',
+        year: '2018–2022',
+        type: 'Formação e estudos',
+        title: 'Estudos em Análise Reichiana',
+        venue: 'Instituto Brasileiro de Análise Reichiana em parceria com a Scuola Italiana Analisi Reichiana',
+        link: null
+    },
+    {
+        id: 'revisao-sistematica',
+        year: '2016',
+        type: 'Artigo científico',
+        title: 'Depressão e masculinidades: uma revisão sistemática da literatura em periódicos brasileiros',
+        venue: 'Psicologia em Estudo — Universidade Estadual de Maringá',
+        link: 'https://periodicos.uem.br/ojs/index.php/PsicolEstud/article/view/31896'
+    },
+    {
         id: 'masculinidades-diss',
         year: '2016',
         type: 'Dissertação de mestrado',
-        title: 'Construção das masculinidades em depressão',
-        venue: 'Programa de Pós-Graduação em Psicologia Clínica e Cultura — Universidade de Brasília',
+        title: 'Construção das masculinidades em depressão: revisão de literatura e análise de casos',
+        venue: 'Mestrado em Psicologia Clínica e Cultura — Universidade de Brasília / CNPq. Orientadora: Valeska Maria Zanello de Loyola',
         link: 'https://repositorio.unb.br/handle/10482/21691'
     },
     {
-        id: 'corpo-pesq',
-        year: '2015',
-        type: 'Pesquisa acadêmica',
-        title: 'Representações subjetivas do corpo na saúde',
-        venue: 'Universidade de Brasília — saúde mental, gênero e cultura',
+        id: 'psicanalise-corpo',
+        year: '2009',
+        type: 'Trabalho de conclusão de curso',
+        title: 'Psicanálise, corpo e clínica',
+        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. Orientadora: Marcella Marjory Massolini Laureano Prottis',
         link: null
+    },
+    {
+        id: 'representacoes-corpo',
+        year: '2008',
+        type: 'Iniciação científica',
+        title: 'As representações sociais do corpo como produção subjetiva: um estudo de caso',
+        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. Orientadora: Valéria Deusdará Mori',
+        link: 'https://repositorio.uniceub.br/items/965017a8-1213-4d09-9a96-4f331ad87cf2'
     }
 ];
 
 const timeline = [
-    { year: '2009', label: 'Graduação em Psicologia', place: 'UniCEUB' },
-    { year: '2016', label: 'Mestrado em Psicologia Clínica e Cultura', place: 'Universidade de Brasília' },
-    { year: '2025', label: 'Especialização em Teoria Psicanalítica', place: 'UniCEUB / Sociedade de Psicanálise de Brasília' }
+    { year: '2009', label: 'Graduação em Psicologia', place: 'Centro Universitário de Brasília — UniCEUB' },
+    { year: '2016', label: 'Mestrado em Psicologia Clínica e Cultura', place: 'Universidade de Brasília — UnB' },
+    { year: '2018–2022', label: 'Estudos em Análise Reichiana', place: 'Instituto Brasileiro de Análise Reichiana / Scuola Italiana Analisi Reichiana' },
+    { year: '2025', label: 'Especialização em Teoria Psicanalítica', place: 'UniCEUB / Sociedade Brasileira de Psicanálise' }
 ];
 
 export function Research() {

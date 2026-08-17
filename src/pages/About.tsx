@@ -8,7 +8,7 @@ const stats = [
     {
         value: '20',
         unit: 'anos',
-        label: 'Dedicados à clínica',
+        label: 'anos dedicados à Psicologia',
         text: 'Quase duas décadas de prática e estudos em saúde mental, com atenção às questões de gênero.'
     },
     {
@@ -58,15 +58,15 @@ export function About() {
 
                     <div className="about-text">
                         <p>
-                            A <strong>Mais Uma Semente</strong> surgiu a partir de reflexões
-                            profundas sobre os vários caminhos que a vida pode ter, as várias
-                            fases em que ela se divide e todas as condições necessárias para
-                            que tudo possa seguir de maneira fluida e virtuosa.
+                            O <strong>Tempo da Semente e a Lógica do Sujeito </strong> Vivemos em uma era que exige o imperativo da imagem e a performance constante. Na contramão da urgência dos nossos tempos, a Clínica Mais Uma Semente aposta no valor da maturação.
                         </p>
                         <p>
-                            Dedico-me integralmente à clínica e aos estudos em saúde mental há
-                            quase duas décadas, com especial atenção às questões que
-                            <em> atravessam mulheres e homens em suas especificidades de gênero</em>.
+                            Para a psicanálise, o desenvolvimento não é linear, mas um conjunto de tempos da constituição subjetiva. Assim como a semente exige a escuridão do solo e o tempo da espera para germinar, a singularidade do sujeito requer um espaço de escuta que valide suas pausas e seus impasses.
+                        </p>
+                        <p>
+                            Essa perspectiva integra o rigor da investigação inconsciente com a sensibilidade dos estudos contemporâneos sobre corporeidade, compreendendo que o sofrimento se inscreve tanto na palavra quanto no corpo. Inaugurar travessias e posicionamentos para o sujeito é, portanto, um trabalho de desconstrução. Cria a possibilidade de retirar o que não cabe mais pela análise das pedagogias afetivas e dos dispositivos de gênero que silenciam o desejo e engessam a vida.
+
+                            <em> Permitindo, assim, que a potência singular de cada um encontre, enfim, seu lugar no mundo.</em>.
                         </p>
                     </div>
 
