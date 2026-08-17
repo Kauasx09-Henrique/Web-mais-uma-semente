@@ -60,7 +60,7 @@ export function Services() {
                     <span className="services-kicker">Atendimento</span>
                     <h2 className="services-title">
                         Psicoterapia individual de orientação psicanalítica respeitando a singularidade<br />
-                        <em> e o tempo de cada pessoa.</em>
+                        <em>respeitando a singularidade e o tempo de cada pessoa.</em>
                     </h2>
                     <p className="services-subtitle">
                         Psicoterapia individual de orientação psicanalítica, adaptada ao
