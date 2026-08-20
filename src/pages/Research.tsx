@@ -40,9 +40,9 @@ const publications = [
     {
         id: 'depressao-homens',
         year: '2019',
-        type: 'Artigo',
+        type: 'Capítulo de livro',
         title: 'Depressão em homens: uma leitura a partir das masculinidades',
-        venue: 'Publicação em periódico',
+        venue: 'Publicação em capitulo de livro Pluralidade masculina: contribuições para pesquisa em saúde do homem',
         link: 'https://drive.google.com/file/d/1N6z3Gq7ZWjizzEKYQ612NTvjRK1id89e/view'
     },
     {
@@ -74,7 +74,7 @@ const publications = [
         year: '2009',
         type: 'Trabalho de conclusão de curso',
         title: 'Psicanálise, corpo e clínica',
-        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. Orientadora: Marcella Marjory Massolini Laureano Prottis',
+        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. ㅤㅤㅤㅤOrientadora: Marcella Marjory Massolini Laureano Prottis',
         link: null
     },
     {
@@ -90,7 +90,6 @@ const publications = [
 const timeline = [
     { year: '2009', label: 'Graduação em Psicologia', place: 'Centro Universitário de Brasília — UniCEUB' },
     { year: '2016', label: 'Mestrado em Psicologia Clínica e Cultura', place: 'Universidade de Brasília — UnB' },
-    { year: '2018–2022', label: 'Estudos em Análise Reichiana', place: 'Instituto Brasileiro de Análise Reichiana / Scuola Italiana Analisi Reichiana' },
     { year: '2025', label: 'Especialização em Teoria Psicanalítica', place: 'UniCEUB / Sociedade Brasileira de Psicanálise' }
 ];
 
@@ -214,6 +213,24 @@ export function Research() {
                             </li>
                         ))}
                     </ol>
+                </div>
+
+                <div className="research-lattes">
+                    <span className="lattes-label">Currículo completo</span>
+                    <p className="lattes-text">
+                        Para mais informações, acesse o CV Lattes:{' '}
+                        <a
+                            href="http://lattes.cnpq.br/5923760493881636"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="lattes-link"
+                        >
+                            lattes.cnpq.br/5923760493881636
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M9 7h8v8" />
+                            </svg>
+                        </a>
+                    </p>
                 </div>
 
                 <div className="research-band">

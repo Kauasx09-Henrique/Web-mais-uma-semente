@@ -118,8 +118,7 @@ export function Footer() {
                         <h4 className="footer-col-title">Contato</h4>
                         <div className="footer-contacts">
                             <a href="mailto:contato@maisumasemente.com.br" className="footer-contact-item">
-                                <span className="contact-label">E-mail</span>
-                                <span className="contact-value">contato@maisumasemente.com.br</span>
+
                             </a>
                             <a href="tel:+5561999999999" className="footer-contact-item">
                                 <span className="contact-label">Telefone</span>

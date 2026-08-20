@@ -58,7 +58,9 @@ export function About() {
 
                     <div className="about-text">
                         <p>
-                            O <strong>Tempo da Semente e a Lógica do Sujeito </strong> Vivemos em uma era que exige o imperativo da imagem e a performance constante. Na contramão da urgência dos nossos tempos, a Clínica Mais Uma Semente aposta no valor da maturação.
+                            <strong>Tempo da Semente e a Lógica do Sujeito  </strong>
+                            <br></br>
+                            Vivemos em uma era que exige o imperativo da imagem e a performance constante. Na contramão da urgência dos nossos tempos, a Clínica Mais Uma Semente aposta no valor da maturação.
                         </p>
                         <p>
                             Para a psicanálise, o desenvolvimento não é linear, mas um conjunto de tempos da constituição subjetiva. Assim como a semente exige a escuridão do solo e o tempo da espera para germinar, a singularidade do sujeito requer um espaço de escuta que valide suas pausas e seus impasses.
