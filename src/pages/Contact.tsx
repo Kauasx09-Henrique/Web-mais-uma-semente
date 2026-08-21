@@ -18,12 +18,6 @@ const contactInfo = [
     },
     {
         num: '03',
-        title: 'E-mail',
-        lines: ['contato@maisumasemente.com.br'],
-        action: { label: 'Escrever', href: 'mailto:contato@maisumasemente.com.br' }
-    },
-    {
-        num: '04',
         title: 'Atendimento',
         lines: ['Presencial em Brasília e online', 'Segunda a sexta, com hora marcada'],
         action: null
@@ -81,8 +75,7 @@ export function Contact() {
                         <span className="cd-line"><span>é <em>uma mensagem</em></span></span>
                     </h2>
                     <p className="contact-lead">
-                        Escreva com suas palavras. Respondo pessoalmente, com sigilo,
-                        e combinamos juntas o melhor horário.
+                        Escreva com suas palavras. Respondo pessoalmente, com sigilo, e combinamos o melhor horário.
                     </p>
                 </header>
 

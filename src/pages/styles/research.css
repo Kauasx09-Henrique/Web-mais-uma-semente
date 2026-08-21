@@ -376,6 +376,13 @@
     white-space: nowrap;
 }
 
+.publication-advisor {
+    display: block;
+    margin-top: 6px;
+    font-style: italic;
+    color: rgba(30, 27, 36, 0.68);
+}
+
 /* formação */
 .timeline {
     list-style: none;

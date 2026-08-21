@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './styles/header.css';
 
@@ -9,7 +9,6 @@ type NavItem = { label: string; to: string; hash?: string };
 const navItems: NavItem[] = [
     { label: 'Início', to: '/', hash: '#inicio' },
     { label: 'Sobre mim', to: '/', hash: '#sobre' },
-    { label: 'Quando buscar', to: '/', hash: '#quando-buscar' },
     { label: 'Terapias', to: '/', hash: '#terapias' },
     { label: 'Pesquisa', to: '/pesquisa' },
 ];
@@ -19,6 +18,8 @@ export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeHash, setActiveHash] = useState('#inicio');
     const [progress, setProgress] = useState(0);
+    const [hideOnScroll, setHideOnScroll] = useState(false);
+    const lastY = useRef(0);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -26,9 +27,12 @@ export function Header() {
 
     useEffect(() => {
         const onScroll = () => {
-            setIsScrolled(window.scrollY > 40);
+            const y = window.scrollY;
+            setIsScrolled(y > 40);
+            setHideOnScroll(y > lastY.current && y > 140);
+            lastY.current = y;
             const h = document.documentElement.scrollHeight - window.innerHeight;
-            setProgress(h > 0 ? (window.scrollY / h) * 100 : 0);
+            setProgress(h > 0 ? (y / h) * 100 : 0);
         };
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
@@ -99,13 +103,13 @@ export function Header() {
         item.hash ? isHome && activeHash === item.hash : location.pathname === item.to;
 
     return (
-        <header className={`header-main ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
+        <header className={`header-main ${isScrolled ? 'scrolled' : ''} ${hideOnScroll ? 'hide-on-scroll' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
             <div className="header-container">
                 <Link to="/" className="header-logo" onClick={() => setIsMenuOpen(false)}>
                     <img src={logo} alt="Mais Uma Semente" className="logo-image" />
                     <span className="logo-divider" aria-hidden="true"></span>
                     <span className="logo-caption">
-                        Psicologia<br />&amp; Psicanálise
+
                     </span>
                 </Link>
 
@@ -126,12 +130,7 @@ export function Header() {
                 </nav>
 
                 <div className="header-action">
-                    <a href="/#contato" className="btn-agendar" onClick={goToContact}>
-                        <span>Agendar</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <path d="M5 12h14M13 6l6 6-6 6" />
-                        </svg>
-                    </a>
+
 
                     <button
                         className={`menu-toggle ${isMenuOpen ? 'is-open' : ''}`}

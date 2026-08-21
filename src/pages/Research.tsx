@@ -42,7 +42,7 @@ const publications = [
         year: '2019',
         type: 'Capítulo de livro',
         title: 'Depressão em homens: uma leitura a partir das masculinidades',
-        venue: 'Publicação em capitulo de livro Pluralidade masculina: contribuições para pesquisa em saúde do homem',
+        venue: 'Publicação em capítulo de livro — Pluralidade masculina: contribuições para pesquisa em saúde do homem',
         link: 'https://drive.google.com/file/d/1N6z3Gq7ZWjizzEKYQ612NTvjRK1id89e/view'
     },
     {
@@ -74,7 +74,7 @@ const publications = [
         year: '2009',
         type: 'Trabalho de conclusão de curso',
         title: 'Psicanálise, corpo e clínica',
-        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. ㅤㅤㅤㅤOrientadora: Marcella Marjory Massolini Laureano Prottis',
+        venue: 'Graduação em Psicologia — Centro Universitário de Brasília. Orientadora: Marcella Marjory Massolini Laureano Prottis',
         link: null
     },
     {
@@ -179,16 +179,22 @@ export function Research() {
                                     <div className="publication-body">
                                         <span className="publication-type">{pub.type}</span>
                                         <h4 className="publication-title">{pub.title}</h4>
-                                        <p className="publication-venue">{pub.venue}</p>
+                                        <p className="publication-venue">
+                                            {pub.venue.includes('Orientadora:') ? (
+                                                <>
+                                                    {pub.venue.split('Orientadora:')[0].trim()}
+                                                    <br />
+                                                    <span className="publication-advisor">Orientadora: {pub.venue.split('Orientadora:')[1].trim()}</span>
+                                                </>
+                                            ) : pub.venue}
+                                        </p>
                                     </div>
                                     <span className="publication-arrow" aria-hidden="true">
                                         {pub.link ? (
                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M7 17L17 7M9 7h8v8" />
                                             </svg>
-                                        ) : (
-                                            <span className="publication-soon">Em breve</span>
-                                        )}
+                                        ) : null}
                                     </span>
                                 </Tag>
                             );

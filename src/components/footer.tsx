@@ -68,9 +68,10 @@ export function Footer() {
                 <div className="footer-grid">
                     <div className="footer-brand-col">
                         <Link to="/" className="footer-logo">
-                            <SeedIcon className="logo-icon" />
+                            <img src="/logo.png" alt="Logo da Mais Uma Semente" className="footer-logo-image" />
                             <span className="logo-text">
                                 <span className="logo-thin">mais uma</span>
+                                <br />
                                 <span className="logo-bold">SEMENTE</span>
                             </span>
                         </Link>
@@ -117,9 +118,7 @@ export function Footer() {
                     <div className="footer-contact-col">
                         <h4 className="footer-col-title">Contato</h4>
                         <div className="footer-contacts">
-                            <a href="mailto:contato@maisumasemente.com.br" className="footer-contact-item">
 
-                            </a>
                             <a href="tel:+5561999999999" className="footer-contact-item">
                                 <span className="contact-label">Telefone</span>
                                 <span className="contact-value">+55 (61) 99999-9999</span>
@@ -141,6 +140,6 @@ export function Footer() {
                 </div>
 
             </div>
-        </footer>
+        </footer >
     );
 }

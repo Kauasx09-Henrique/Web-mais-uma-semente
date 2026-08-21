@@ -25,7 +25,7 @@ const servicesData = [
         format: 'Online ou presencial',
         features: [
             'Escuta acolhedora e sigilosa',
-            'Elaboração de questões pscificas',
+            'Elaboração de questões psíquicas ',
             'Dinâmicas dos afetos',
             'Acompanhamento contínuo'
         ]
@@ -59,8 +59,9 @@ export function Services() {
                 <header className="services-header">
                     <span className="services-kicker">Atendimento</span>
                     <h2 className="services-title">
-                        Psicoterapia individual de orientação psicanalítica <br />
-                        <em>respeitando a singularidade e o tempo de cada pessoa.</em>
+                        Psicoterapia individual de orientação psicanalítica
+                        <br />
+                        <em>apoiada no tempo do sujeito.</em>
                     </h2>
                     <p className="services-subtitle">
                         Psicoterapia individual de orientação psicanalítica, adaptada ao

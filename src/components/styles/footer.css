@@ -13,8 +13,8 @@
 
 .footer-watermark {
     position: absolute;
-    right: -0.04em;
-    bottom: -0.3em;
+    right: -0.01em;
+    bottom: -0.1em;
     font-family: 'Soho', 'Georgia', serif;
     font-style: italic;
     font-size: clamp(7rem, 18vw, 17rem);
@@ -137,10 +137,15 @@
     transform: rotate(20deg) scale(1.06);
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
+.footer-logo-image {
+    height: 46px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+.footer-logo:hover .footer-logo-image {
+    transform: scale(1.05);
 }
 
 .logo-thin {
