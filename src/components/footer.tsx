@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles/footer.css';
 
-const SeedIcon = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 22c0-4.5-3.5-8-8-8 4.5 0 8-3.5 8-8 0 4.5 3.5 8 8 8-4.5 0-8 3.5-8 8z" />
-    </svg>
-);
+
 
 const InstagramIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
