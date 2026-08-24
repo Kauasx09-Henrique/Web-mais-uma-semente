@@ -64,8 +64,7 @@ export function Services() {
                         <em>apoiada no tempo do sujeito.</em>
                     </h2>
                     <p className="services-subtitle">
-                        Psicoterapia individual de orientação psicanalítica, adaptada ao
-                        momento de vida de cada pessoa.
+                        Psicoterapia individual de orientação psicanalítica, apoiada no tempo do sujeito.
                     </p>
                 </header>
 

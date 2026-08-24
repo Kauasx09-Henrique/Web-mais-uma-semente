@@ -224,7 +224,7 @@ export function Research() {
                 <div className="research-lattes">
                     <span className="lattes-label">Currículo completo</span>
                     <p className="lattes-text">
-                        Para mais informações, acesse o CV Lattes:{' '}
+                        Para mais informações, acesse o Currículo Lattes:{' '}
                         <a
                             href="http://lattes.cnpq.br/5923760493881636"
                             target="_blank"

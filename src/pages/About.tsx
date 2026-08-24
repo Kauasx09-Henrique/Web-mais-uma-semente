@@ -60,6 +60,7 @@ export function About() {
                         <p>
                             <strong>Tempo da Semente e a Lógica do Sujeito  </strong>
                             <br></br>
+
                             Vivemos em uma era que exige o imperativo da imagem e a performance constante. Na contramão da urgência dos nossos tempos, a Clínica Mais Uma Semente aposta no valor da maturação.
                         </p>
                         <p>

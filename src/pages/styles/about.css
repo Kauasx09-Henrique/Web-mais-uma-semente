@@ -140,7 +140,10 @@
 
 .about-text strong {
     color: #1E1B24;
-    font-weight: 600;
+    font-weight: 700;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .about-text em {

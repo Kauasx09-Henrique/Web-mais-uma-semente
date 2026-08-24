@@ -22,9 +22,9 @@ const slides = [
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1645724466238-9352ff166001?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=yukon-haughton-4ncwYUlNtEU-unsplash.jpg',
-        tag: 'Escuta que transforma',
-        title1: 'Escuta que transforma',
-        subtitle: 'Uma abordagem psicanalítica para compreender suas questões mais profundas.',
+        tag: 'A contrução da história',
+        title1: 'Escuta da própria narrativa',
+        subtitle: 'Uma abordagem psicanalítica para compreender o seu mundo pscíquico.',
     },
     {
         id: 3,
