@@ -7,8 +7,8 @@ const contactInfo = [
     {
         num: '01',
         title: 'Consultório',
-        lines: ['SHS Quadra 06, Bloco A, Sala 000', 'Asa Sul, Brasília — DF'],
-        action: { label: 'Ver no mapa', href: 'https://maps.google.com/?q=Asa+Sul+Brasilia+DF' }
+        lines: ['Setor Hospitalar Local Norte Bloco K Condomínio Centro Clinico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560'],
+        action: { label: 'Ver no mapa', href: 'https://maps.app.goo.gl/GQMyvfko5YohrtRY6' }
     },
     {
         num: '02',
