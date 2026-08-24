@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './styles/contact.css';
 
-const WHATSAPP_NUMBER = '5561999999999';
+const WHATSAPP_NUMBER = '5561981126542';
 
 const contactInfo = [
     {
@@ -13,7 +13,7 @@ const contactInfo = [
     {
         num: '02',
         title: 'WhatsApp',
-        lines: ['+55 (61) 99999-9999'],
+        lines: ['+55 (61) 98112-6542'],
         action: { label: 'Conversar', href: `https://wa.me/${WHATSAPP_NUMBER}` }
     },
     {

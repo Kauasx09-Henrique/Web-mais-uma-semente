@@ -37,7 +37,7 @@ const navLinks = [
 
 const socialLinks = [
     { href: '#', label: 'Instagram', icon: <InstagramIcon /> },
-    { href: 'https://wa.me/5561999999999', label: 'WhatsApp', icon: <WhatsappIcon /> },
+    { href: 'https://wa.me/5561981126542', label: 'WhatsApp', icon: <WhatsappIcon /> },
     { href: '#', label: 'LinkedIn', icon: <LinkedinIcon /> },
 ];
 
@@ -115,9 +115,9 @@ export function Footer() {
                         <h4 className="footer-col-title">Contato</h4>
                         <div className="footer-contacts">
 
-                            <a href="tel:+5561999999999" className="footer-contact-item">
+                            <a href="tel:+5561981126542" className="footer-contact-item">
                                 <span className="contact-label">Telefone</span>
-                                <span className="contact-value">+55 (61) 99999-9999</span>
+                                <span className="contact-value">(61) 9 8112-6542</span>
                             </a>
                             <div className="footer-contact-item is-static">
                                 <span className="contact-label">Consultório</span>
