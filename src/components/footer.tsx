@@ -120,8 +120,9 @@ export function Footer() {
                                 <span className="contact-value">(61) 9 8112-6542</span>
                             </a>
                             <div className="footer-contact-item is-static">
+
                                 <span className="contact-label">Consultório</span>
-                                <span className="contact-value">Asa Norte, Brasília — DF</span>
+                                <span className="contact-value">Setor Hospitalar Local Norte Bloco K Condomínio Centro Clinico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560</span>
                                 <span className="contact-extra">Presencial e online</span>
                             </div>
                         </div>
