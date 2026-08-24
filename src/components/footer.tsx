@@ -36,9 +36,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-    { href: '#', label: 'Instagram', icon: <InstagramIcon /> },
+    { href: 'https://www.instagram.com/naiarawindmoller.psi/', label: 'Instagram', icon: <InstagramIcon /> },
     { href: 'https://wa.me/5561981126542', label: 'WhatsApp', icon: <WhatsappIcon /> },
-    { href: '#', label: 'LinkedIn', icon: <LinkedinIcon /> },
+    { href: 'https://www.linkedin.com/in/naiara-windm%C3%B6ller-8034a337/', label: 'LinkedIn', icon: <LinkedinIcon /> },
 ];
 
 export function Footer() {

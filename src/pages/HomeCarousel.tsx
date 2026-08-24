@@ -17,7 +17,7 @@ const slides = [
         image: livro,
         tag: 'Psicoterapia',
         title: 'Dar lugar a si',
-        subtitle: 'Um espaço dedicado aos processos subjetivos. Onde o sintoma vira escuta e o sujeito encontra sua própria voz',
+        subtitle: 'Um espaço dedicado aos processos subjetivos. Onde o sintoma vira escuta e o sujeito encontra sua própria voz.',
     },
     {
         id: 2,

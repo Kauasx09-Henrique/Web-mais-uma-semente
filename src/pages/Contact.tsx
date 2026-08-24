@@ -7,7 +7,7 @@ const contactInfo = [
     {
         num: '01',
         title: 'Consultório',
-        lines: ['Setor Hospitalar Local Norte Bloco K Condomínio Centro Clinico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560'],
+        lines: ['Setor Hospitalar Local Norte Bloco K Condomínio Centro Clínico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560'],
         action: { label: 'Ver no mapa', href: 'https://maps.app.goo.gl/GQMyvfko5YohrtRY6' }
     },
     {
