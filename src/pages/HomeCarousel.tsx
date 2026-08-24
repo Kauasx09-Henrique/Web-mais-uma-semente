@@ -24,7 +24,7 @@ const slides = [
         image: 'https://images.unsplash.com/photo-1645724466238-9352ff166001?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=yukon-haughton-4ncwYUlNtEU-unsplash.jpg',
         tag: 'A contrução da história',
         title1: 'Escuta da própria narrativa',
-        subtitle: 'Uma abordagem psicanalítica para compreender o seu mundo Psíquico.',
+        subtitle: 'Uma abordagem psicanalítica para compreender o seu mundo psíquico.',
     },
     {
         id: 3,
