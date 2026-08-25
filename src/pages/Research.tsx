@@ -62,12 +62,15 @@ const publications = [
         link: 'https://periodicos.uem.br/ojs/index.php/PsicolEstud/article/view/31896'
     },
     {
+
+
         id: 'masculinidades-diss',
         year: '2016',
         type: 'Dissertação de mestrado',
         title: 'Construção das masculinidades em depressão: revisão de literatura e análise de casos',
         venue: 'Mestrado em Psicologia Clínica e Cultura — Universidade de Brasília / CNPq. Orientadora: Valeska Maria Zanello de Loyola',
-        link: 'https://repositorio.unb.br/handle/10482/21691'
+        link: null
+
     },
     {
         id: 'psicanalise-corpo',

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import './styles/about.css';
 
 // Foto da Naiara
+
 import naiaraImage from '../../public/naiara/foto-naiara.jpeg';
 
 const stats = [
@@ -104,12 +105,14 @@ export function About() {
                         alt="Naiara Windmöller — psicóloga e psicanalista"
                         className="about-img"
                     />
+                    {/*
                     <a
                         href="https://repositorio.unb.br/handle/10482/21691"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="figure-badge"
                     >
+                     
                         <span className="badge-label">Pesquisa</span>
                         <span className="badge-title">Dissertação de mestrado — UnB</span>
                         <span className="badge-arrow" aria-hidden="true">
@@ -118,6 +121,8 @@ export function About() {
                             </svg>
                         </span>
                     </a>
+                     */}
+
                 </div>
 
             </div>
