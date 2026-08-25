@@ -246,7 +246,9 @@ export function Research() {
                     <blockquote className="band-quote">
                         Pesquisar é uma forma de escutar mais longe —
                         <em> e escutar melhor de perto.</em>
+
                     </blockquote>
+                    {/*
                     <a
                         href="https://repositorio.unb.br/handle/10482/21691"
                         target="_blank"
@@ -258,6 +260,7 @@ export function Research() {
                             <path d="M5 12h14M13 6l6 6-6 6" />
                         </svg>
                     </a>
+                       */}
                 </div>
 
             </div>
