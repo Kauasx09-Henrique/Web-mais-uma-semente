@@ -122,7 +122,7 @@ export function Footer() {
                             <div className="footer-contact-item is-static">
 
                                 <span className="contact-label">Consultório</span>
-                                <span className="contact-value">Setor Hospitalar Local Norte Bloco K Condomínio Centro Clinico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560</span>
+                                <span className="contact-value">Setor Hospitalar Local Norte Bloco K Condomínio Centro Clínico Norte I sala 02 subsolo - Asa Norte, Brasília - DF, 70770-560</span>
                                 <span className="contact-extra">Presencial e online</span>
                             </div>
                         </div>
