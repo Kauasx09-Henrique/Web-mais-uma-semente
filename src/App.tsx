@@ -10,6 +10,9 @@ import { Quote } from './pages/Quote';
 import { Contact } from './pages/Contact';
 import { Research } from './pages/Research';
 
+import { Analytics } from "@vercel/analytics/react"
+
+
 function ScrollManager() {
   const { pathname, hash } = useLocation();
 
@@ -63,6 +66,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <Analytics />
     </div>
   );
 }
