@@ -1,0 +1,28 @@
+{
+    "redirects": [
+        {
+            "source": "/sobre",
+            "destination": "/quem-somos",
+            "permanent": true
+        },
+        {
+            "source": "/sobre/",
+            "destination": "/quem-somos",
+            "permanent": true
+        },
+        {
+            "source": "/naiara-windmoller",
+            "destination": "/equipe/naiara",
+            "permanent": true
+        },
+        {
+            "source": "/naiara-windmoller/",
+            "destination": "/equipe/naiara",
+            "permanent": true
+        }
+    ],
+    "rewrites": {
+        "source": "/(.*)",
+        "destination": "/index.html"
+    }
+}
